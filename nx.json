@@ -1,0 +1,40 @@
+{
+  "affected": {
+    "defaultBase": "main"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ]
+      }
+    }
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ]
+    }
+  },
+  "workspaceLayout": {
+    "appsDir": "projects",
+    "libsDir": "projects"
+  },
+  "cli": {
+    "analytics": "ba979833-7cec-4028-955f-7e3ef3084a91"
+  },
+  "defaultProject": "TestProject"
+}
